@@ -5,8 +5,9 @@ import { OrderController, getOrderController, getOrderByIdController } from "../
 
 const ordersRouter = Router()
 
-ordersRouter.post("/orders", validateSchema(orderSchema), OrderController);
 ordersRouter.get("/orders", getOrderController)
 ordersRouter.get("/orders/:id", getOrderByIdController)
+ordersRouter.post("/orders", validateSchema(orderSchema), OrderController);
+
 
 export default ordersRouter;

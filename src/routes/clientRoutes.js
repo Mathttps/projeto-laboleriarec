@@ -5,7 +5,8 @@ import { getClientByIdControll, ClientController } from "../controllers/clientsC
 
 const clientsRouter = Router()
 
-clientsRouter.post("/clients", validateSchema(clientSchema), ClientController);
 clientsRouter.get("/clients/:id/orders", getClientByIdControll)
+clientsRouter.post("/clients", validateSchema(clientSchema), ClientController);
+
 
 export default clientsRouter;
